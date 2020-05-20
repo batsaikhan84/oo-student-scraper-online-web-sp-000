@@ -15,6 +15,7 @@ class CommandLineInterface
   def make_students
     students_array = Scraper.scrape_index_page(BASE_PATH + 'index.html')
     Student.create_from_collection(students_array)
+    binding.pry
   end
 
   def add_attributes_to_students
